@@ -16,19 +16,19 @@ public final class Threads {
   public static void exec(ThrowingRunnable body) {
     try {
       body.run();
-    } catch (InterruptedException e) {
+    } catch (final InterruptedException e) {
       Thread.currentThread().interrupt();
       e.printStackTrace();
     }
   }
 
   public static void execAcquiring(Semaphore s, Runnable body) {
-    boolean isAcquired = false;
+    var isAcquired = false;
     try {
       s.acquire();
       isAcquired = true;
       body.run();
-    } catch (InterruptedException e) {
+    } catch (final InterruptedException e) {
       Thread.currentThread().interrupt();
     } finally {
       if (isAcquired) {
@@ -38,18 +38,27 @@ public final class Threads {
   }
 
   public static void execLocking(Lock lock, Runnable body) {
-    boolean isLocked = false;
+    var isLocked = false;
     try {
       lock.lock();
       isLocked = true;
       body.run();
-    }
-    finally {
+    } finally {
       if (isLocked) {
         lock.unlock();
       }
     }
 
+  }
+
+  public static Thread startNew(Runnable body) {
+    final var thread = new Thread(body);
+    thread.start();
+    return thread;
+  }
+
+  public static void sleep(long millis) {
+    exec(() -> Thread.sleep(millis));
   }
 
   private Threads() {}

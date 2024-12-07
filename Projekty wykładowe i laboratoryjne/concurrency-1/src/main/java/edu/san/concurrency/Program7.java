@@ -14,6 +14,8 @@ public class Program7 {
   }
 
   static void runExperiment() {
+    final var start = System.currentTimeMillis();
+
     final var t1 = new Thread(() -> {
       for (var i = 0; i < 10_000_000; i++) {
         incrementCounter();
@@ -34,6 +36,8 @@ public class Program7 {
     Threads.exec(t1::join);
     Threads.exec(t2::join);
 
+    final var end = System.currentTimeMillis();
+    System.out.println("It took " + (end - start) + " msecs");
   }
 
   private static void incrementCounter() {

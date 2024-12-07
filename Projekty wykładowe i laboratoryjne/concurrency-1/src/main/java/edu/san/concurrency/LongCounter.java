@@ -13,6 +13,12 @@ public class LongCounter {
     return ++value;
   }
 
+//  public long inc() {
+//    synchronized (this) {
+//      return ++value;
+//    }
+//  }
+
   public synchronized long getValue() {
     return value;
   }

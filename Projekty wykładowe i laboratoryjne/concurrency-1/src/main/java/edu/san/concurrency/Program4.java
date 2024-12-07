@@ -11,14 +11,15 @@ public class Program4 {
 
   static final Lock l1 = new ReentrantLock(true);
 
-  public static void main(String[] args) {
+  public static void main(String[] args) throws InterruptedException {
     System.out.println(Thread.currentThread());
 
-    // deadlock1();
-    l1.lock();
-    l1.lock();
-    l1.lock();
+//    s1.acquire();
+//    s1.acquire();
 
+    l1.lock();
+    l1.lock();
+    l1.lock();
     l1.unlock();
 
     System.out.println("Gotowe");
