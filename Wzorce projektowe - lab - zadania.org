@@ -18,3 +18,9 @@
    - Parser
 
    zrealizuj przykładowy program wykorzystujący ten wzorzec.
+
+* Zadanie 4.
+   Opierając się na wiedzy o wzorcu
+   - Builder
+
+   zrealizuj przykładowy program wykorzystujący ten wzorzec.

@@ -28,3 +28,6 @@
 
 * Zadanie 4.
    Zrealizuj rozwiązanie problemu 5 filozofów z wykorzystaniem semaforów
+
+* Zadanie 5.
+   Zrealizuj rozwiązanie problemu 5 filozofów z wykorzystaniem monitorów (np. blok synchronized w Javie)
