@@ -11,7 +11,7 @@ public class Program4 {
 
   static final Lock l1 = new ReentrantLock(true);
 
-  public static void main(String[] args) throws InterruptedException {
+  public static void main(String[] args) {
     System.out.println(Thread.currentThread());
 
 //    s1.acquire();

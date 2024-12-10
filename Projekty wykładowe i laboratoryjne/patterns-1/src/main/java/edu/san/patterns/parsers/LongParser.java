@@ -2,9 +2,7 @@
 package edu.san.patterns.parsers;
 
 import java.util.Optional;
+import java.util.function.Function;
 
-public interface LongParser {
-
-  Optional<Long> parseLong(String s);
-
-}
+@FunctionalInterface
+public interface LongParser extends Function<String, Optional<Long>> {}

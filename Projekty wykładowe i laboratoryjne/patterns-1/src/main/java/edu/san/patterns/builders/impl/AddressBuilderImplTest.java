@@ -5,13 +5,13 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-import edu.san.patterns.builders.AddressBuilder;
+import edu.san.patterns.builders.Address;
 
 class AddressBuilderImplTest {
 
   @Test
   void testBuild1() {
-    var address = new AddressBuilderImpl()
+    var address = Address.builder()
         .withCountry("UK")
         .withCity("London")
         .withStreet("Baker St.")
@@ -24,7 +24,7 @@ class AddressBuilderImplTest {
 
   @Test
   void testBuild2() {
-    var address = new AddressBuilderImpl()
+    var address = Address.builder()
         .withCountry("UK")
         .withAppartmentNumber(245)
         .build();
@@ -34,7 +34,7 @@ class AddressBuilderImplTest {
 
   @Test
   void testBuild3() {
-    var address = new AddressBuilderImpl()
+    var address = Address.builder()
         .withCountry("UK")
         .build();
 

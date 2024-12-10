@@ -3,6 +3,8 @@ package edu.san.patterns.builders;
 
 import java.util.Optional;
 
+import edu.san.patterns.builders.impl.AddressBuilderImpl;
+
 public interface Address {
 
   String street();
@@ -16,5 +18,9 @@ public interface Address {
   String country();
 
   Optional<String> postalCode();
+
+  static AddressBuilder builder() {
+    return new AddressBuilderImpl();
+  }
 
 }

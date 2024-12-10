@@ -4,7 +4,7 @@ package edu.san.patterns.builders.impl;
 import edu.san.patterns.builders.Address;
 import edu.san.patterns.builders.AddressBuilder;
 
-final class AddressBuilderImpl implements AddressBuilder {
+public final class AddressBuilderImpl implements AddressBuilder {
 
   private String street = "Piotrkowska";
 
