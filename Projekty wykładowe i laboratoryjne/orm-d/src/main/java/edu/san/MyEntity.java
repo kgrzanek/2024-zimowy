@@ -1,13 +1,13 @@
 package edu.san;
 
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import edu.san.jpa.utils.AbstractEnityWithId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Version;
 
 @Entity
-public class MyEntity extends PanacheEntityBase {
+public class MyEntity extends AbstractEnityWithId<Long, MyEntity> {
 
   @Id
   @GeneratedValue
@@ -18,7 +18,8 @@ public class MyEntity extends PanacheEntityBase {
 
   private String field;
 
-  public final long getId() {
+  @Override
+  public Long getId() {
     return id;
   }
 
@@ -28,21 +29,6 @@ public class MyEntity extends PanacheEntityBase {
 
   public void setField(String field) {
     this.field = field;
-  }
-
-  @Override
-  public final int hashCode() {
-    return Long.hashCode(getId());
-  }
-
-  @Override
-  public final boolean equals(Object obj) {
-    if (this == obj)
-      return true;
-    if (!(obj instanceof MyEntity))
-      return false;
-    MyEntity other = (MyEntity) obj;
-    return getId() == other.getId();
   }
 
 }

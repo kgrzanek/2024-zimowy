@@ -1,20 +1,20 @@
 // © 2024 Konrad Grzanek <kongra@gmail.com>
 package edu.san.adresses;
 
-import edu.san.employees.Employee;
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import java.util.UUID;
+
+import edu.san.jpa.utils.AbstractEnityWithId;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Version;
 
 @Entity
-public class Address extends PanacheEntityBase {
+public class Address extends AbstractEnityWithId<UUID, Address> {
 
   @Id
-  @GeneratedValue(strategy = GenerationType.SEQUENCE)
-  private Long id;
+  @GeneratedValue(generator = "UUID")
+  private UUID id;
 
   @Version
   private short version;
@@ -27,7 +27,8 @@ public class Address extends PanacheEntityBase {
 
   private String number;
 
-  public Long getId() {
+  @Override
+  public UUID getId() {
     return id;
   }
 
@@ -69,21 +70,6 @@ public class Address extends PanacheEntityBase {
 
   public void setNumber(String number) {
     this.number = number;
-  }
-
-  @Override
-  public final int hashCode() {
-    return Long.hashCode(getId());
-  }
-
-  @Override
-  public final boolean equals(Object obj) {
-    if (this == obj)
-      return true;
-    if (!(obj instanceof Employee))
-      return false;
-    Employee other = (Employee) obj;
-    return getId() == other.getId();
   }
 
 }
