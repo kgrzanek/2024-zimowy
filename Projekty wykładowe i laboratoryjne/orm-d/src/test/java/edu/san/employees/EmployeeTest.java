@@ -46,6 +46,7 @@ class EmployeeTest {
         .firstResult();
 
     assertThat(same1).isNotNull();
+    assertThat(same1.getDegree()).isNotBlank();
     assertThat(same1.getAddress()).isNotNull();
 
     System.out.println(same1.getAddress().getCountry());

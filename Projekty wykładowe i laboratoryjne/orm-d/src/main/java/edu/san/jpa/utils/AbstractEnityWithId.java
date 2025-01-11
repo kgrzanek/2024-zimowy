@@ -24,7 +24,7 @@ public abstract class AbstractEnityWithId<I, T extends AbstractEnityWithId<I, T>
 
     @SuppressWarnings("unchecked")
     T other = (T) obj;
-    return getId() == other.getId();
+    return getId().equals(other.getId());
   }
 
 }

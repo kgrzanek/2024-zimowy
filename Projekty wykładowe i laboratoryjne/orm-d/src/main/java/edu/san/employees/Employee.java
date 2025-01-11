@@ -2,9 +2,8 @@
 package edu.san.employees;
 
 import edu.san.adresses.Address;
-import io.quarkus.hibernate.orm.panache.PanacheEntityBase;
+import edu.san.jpa.utils.AbstractEnityWithId;
 import jakarta.persistence.Column;
-import jakarta.persistence.DiscriminatorColumn;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -15,9 +14,9 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Version;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
-@DiscriminatorColumn(name = "employee_type")
-public abstract class Employee extends PanacheEntityBase {
+@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+// @DiscriminatorColumn(name = "employee_type")
+public abstract class Employee extends AbstractEnityWithId<Long, Employee> {
 
   @Id
   @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -36,6 +35,7 @@ public abstract class Employee extends PanacheEntityBase {
   @ManyToOne
   private Address address;
 
+  @Override
   public Long getId() {
     return id;
   }
@@ -78,21 +78,6 @@ public abstract class Employee extends PanacheEntityBase {
 
   public void setAddress(Address address) {
     this.address = address;
-  }
-
-  @Override
-  public final int hashCode() {
-    return Long.hashCode(getId());
-  }
-
-  @Override
-  public final boolean equals(Object obj) {
-    if (this == obj)
-      return true;
-    if (!(obj instanceof Employee))
-      return false;
-    Employee other = (Employee) obj;
-    return getId() == other.getId();
   }
 
 }
