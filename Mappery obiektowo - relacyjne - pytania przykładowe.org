@@ -1,0 +1,11 @@
+1. Co to jest O/R Mapping?
+2. Jakie znasz produkty (biblioteki, frameworki) realizujące ideę ORM (bez opisywania,
+   tylko nazwa i technologia, im więcej, tym lepiej)?
+3. Code-first, DB-first - wyjaśnić różnicę.
+4. Zalety i wady użycia ORM?
+5. Jakie cechy musi spełnić klasa (w Javie lub innym języku), aby mogła być klasą encji?
+6. Co to jest pessimistic locking w systemach baz danych?
+7. Co to jest optimistic locking w systemach baz danych? Jak się go realizuje na poziomie ORMa?
+8. Jak się realizuje relację dziedziczenia w ORMach?
+9. Konfiguracja generatorów identyfikatorów w ORMach?
+10. Przedstaw cykl życia obiektu encyjnego zarządzanego przez ORM?

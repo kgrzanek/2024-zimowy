@@ -1,0 +1,6 @@
+1. Korzyści i wady architektury warstwowej.
+2. Czym jest architektury oparta na mikroserwisach?
+3. Metody integracji systemów rozproszonych.
+4. Opisz wybrany przykład architektury wielowarstwowej oprogramowania.
+5. Na czym polega eventual consistency?
+6. Dlaczego asynchroniczność w systemach rozproszonych jest korzystna? Jakie są jej wady?

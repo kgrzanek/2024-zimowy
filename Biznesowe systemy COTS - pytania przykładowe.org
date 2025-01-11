@@ -1,0 +1,7 @@
+1. Co to jest COTS? Jakie znasz istniejące przykłady tego rodzaju oprogramowania?
+2. Wskaż korzyści płynące z wdrażania systemów COTS zamiast implementacji własnego oprogramowania.
+3. Wskaż zagrożenia występujące w trakcie wdrażania systemów COTS.
+4. Przedstaw scenariusz biznesowy, w którym wdrożenie oprogramowania COTS jest wskazane. Jakiego rodzaju
+   oprogramowanie wykorzystałbyś do realizacji tego wdrożenia.
+5. W jaki sposób może przebiegać współpraca pomiędzy oprogramowaniem COTS a systemami tworzonymi
+   wewnątrz przedsiębiorstwa?
