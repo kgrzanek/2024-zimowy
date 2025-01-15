@@ -1,0 +1,5 @@
+1. Jak machine learning różni się od podejścia algorytmicznego w szucznej inteligencji?
+2. Na czym polega regresja liniowa?
+3. Czym jest business intelligence? Jakie znasz narzędzia pozwalające na realizację BI w wybranym obszarze zastosowań?
+4. Dlaczego przeszukiwanie zbiorów danych tekstowych wymaga specjalnych narzędzi i nie wystarcza zwykłe poszukiwanie liniowe? Jakich podejść i narzędzi wypada tutaj użyć?
+5. Opisz algorytmy, z których korzysta silnik Lucene. Proszę nie wchodzić zbyt głęboko w implementację - chodzi o przedstawienie głównych założeń.
