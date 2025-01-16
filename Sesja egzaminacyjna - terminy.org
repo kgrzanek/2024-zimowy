@@ -1,0 +1,21 @@
+* Studia stacjonarne
+** 7 semestr
+    ORM, COTS, Systemy masowego przetwarzania informacji
+    5 lutego 2024, 10.00 - 13.00, K-43
+
+** 5 semestr
+    Programowanie współbieżne, Wzorce projektowe
+    5 lutego 2024, 13.0 - 16.00, K-43
+
+*** Laboratorium 5 lutego 16.00 - 18.00,  P-33 lab. dla 7 semestru
+
+* Studia niestacjonarne
+** 7 semestr
+    ORM, COTS, Warstwy integracji
+    8.00 - 11.00, K-22, 1 lutego
+
+** 5 semestr
+    Programowanie współbieżne, Wzorce projektowe
+    11.00 - 13.00, K-22, 1 lutego
+
+*** Laboratorium 13.00 - 15.00, K-33, 1 lutego
