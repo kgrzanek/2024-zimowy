@@ -4,6 +4,7 @@ package edu.san.employees;
 import static org.assertj.core.api.Assertions.assertThat;
 
 import java.util.Map;
+import java.util.Set;
 
 import org.junit.jupiter.api.Test;
 
@@ -25,11 +26,13 @@ class EmployeeTest {
     address1.persist();
 
     var lecturer1 = new Lecturer();
+    var addresses = Set.of(address1);
     lecturer1.setEmail("kgrzanek@san.edu.pl");
     lecturer1.setFirstName("Konrad");
     lecturer1.setLastName("Grzanek");
     lecturer1.setDegree("dr inż.");
-    lecturer1.setAddress(address1);
+    lecturer1.setMainAddress(address1);
+    lecturer1.setAdditionalAddresses(addresses);
     lecturer1.persist();
 
     var admin2 = new Administrator();
@@ -47,9 +50,9 @@ class EmployeeTest {
 
     assertThat(same1).isNotNull();
     assertThat(same1.getDegree()).isNotBlank();
-    assertThat(same1.getAddress()).isNotNull();
+    assertThat(same1.getMainAddress()).isNotNull();
 
-    System.out.println(same1.getAddress().getCountry());
+    System.out.println(same1.getMainAddress().getCountry());
 
 //    var lecturers = Lecturer.findAll().list();
 //    lecturers.stream().forEach(System.out::println);

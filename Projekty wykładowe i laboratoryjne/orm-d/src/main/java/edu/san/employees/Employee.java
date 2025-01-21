@@ -1,16 +1,22 @@
 // © 2024 Konrad Grzanek <kongra@gmail.com>
 package edu.san.employees;
 
+import java.util.List;
+import java.util.Set;
+
 import edu.san.adresses.Address;
 import edu.san.jpa.utils.AbstractEnityWithId;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
+import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Version;
 
 @Entity
@@ -32,8 +38,11 @@ public abstract class Employee extends AbstractEnityWithId<Long, Employee> {
 
   private String lastName;
 
-  @ManyToOne
-  private Address address;
+  @ManyToOne(fetch = FetchType.LAZY)
+  private Address mainAddress;
+
+  @ManyToMany
+  private Set<Address> additionalAddresses;
 
   @Override
   public Long getId() {
@@ -72,12 +81,22 @@ public abstract class Employee extends AbstractEnityWithId<Long, Employee> {
     this.lastName = lastName;
   }
 
-  public Address getAddress() {
-    return address;
+  public Address getMainAddress() {
+    return mainAddress;
   }
 
-  public void setAddress(Address address) {
-    this.address = address;
+  public void setMainAddress(Address mainAddress) {
+    this.mainAddress = mainAddress;
   }
+
+  public Set<Address> getAdditionalAddresses() {
+    return additionalAddresses;
+  }
+
+  public void setAdditionalAddresses(Set<Address> additionalAddresses) {
+    this.additionalAddresses = additionalAddresses;
+  }
+
+
 
 }
