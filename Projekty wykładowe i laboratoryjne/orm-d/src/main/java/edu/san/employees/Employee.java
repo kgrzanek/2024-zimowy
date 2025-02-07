@@ -1,7 +1,6 @@
 // © 2024 Konrad Grzanek <kongra@gmail.com>
 package edu.san.employees;
 
-import java.util.List;
 import java.util.Set;
 
 import edu.san.adresses.Address;
@@ -16,7 +15,6 @@ import jakarta.persistence.Inheritance;
 import jakarta.persistence.InheritanceType;
 import jakarta.persistence.ManyToMany;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Version;
 
 @Entity

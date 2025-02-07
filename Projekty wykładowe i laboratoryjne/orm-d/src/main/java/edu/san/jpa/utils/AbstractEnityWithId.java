@@ -19,7 +19,7 @@ public abstract class AbstractEnityWithId<I, T extends AbstractEnityWithId<I, T>
   public final boolean equals(Object obj) {
     if (this == obj)
       return true;
-    if (!this.getClass().isInstance(obj))
+    if (!getClass().isInstance(obj))
       return false;
 
     @SuppressWarnings("unchecked")
