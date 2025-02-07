@@ -23,7 +23,7 @@ public abstract class AbstractEnityWithId<I, T extends AbstractEnityWithId<I, T>
       return false;
 
     @SuppressWarnings("unchecked")
-    T other = (T) obj;
+    final var other = (T) obj;
     return getId().equals(other.getId());
   }
 

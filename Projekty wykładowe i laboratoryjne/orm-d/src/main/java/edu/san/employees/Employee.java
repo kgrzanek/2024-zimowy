@@ -95,6 +95,4 @@ public abstract class Employee extends AbstractEnityWithId<Long, Employee> {
     this.additionalAddresses = additionalAddresses;
   }
 
-
-
 }
