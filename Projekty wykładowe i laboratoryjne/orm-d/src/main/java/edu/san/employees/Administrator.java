@@ -4,11 +4,9 @@ package edu.san.employees;
 import java.util.Objects;
 
 import jakarta.persistence.Column;
-// import jakarta.persistence.DiscriminatorValue;
 import jakarta.persistence.Entity;
 
 @Entity
-// @DiscriminatorValue("Admin")
 public class Administrator extends Employee {
 
   @Column(nullable = false)

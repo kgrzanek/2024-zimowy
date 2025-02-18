@@ -53,9 +53,6 @@ class EmployeeTest {
     assertThat(same1.getMainAddress()).isNotNull();
 
     System.out.println(same1.getMainAddress().getCountry());
-
-//    var lecturers = Lecturer.findAll().list();
-//    lecturers.stream().forEach(System.out::println);
   }
 
 }

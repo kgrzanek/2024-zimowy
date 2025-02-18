@@ -98,19 +98,4 @@ class ColoredPoint extends Point {
     this.color = color;
   }
 
-//  @Override
-//  public int hashCode() {
-//    final var prime = 31;
-//    var result = super.hashCode();
-//    return prime * result + Objects.hash(color);
-//  }
-//
-//  @Override
-//  public boolean equals(Object obj) {
-//    if (this == obj)
-//      return true;
-//    if (!super.equals(obj) || !(obj instanceof final ColoredPoint other))
-//      return false;
-//    return color == other.color;
-//  }
 }
